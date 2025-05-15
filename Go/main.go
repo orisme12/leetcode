@@ -26,10 +26,9 @@ func main(){
 	
 	// Declaracion de variable local y su valor es inferido , significa que el compilador decide el tipo de la variable, en función del valor.
 	year := 1990
-
-	// otra forma de inferido es : 
+	mensaje := Hello("Carlos")
+	fmt.Println(mensaje)
 	var comunicado = "Aprobado"
-
 	fmt.Println("Mi nombre es: ",name,"y fui afortunadamente",comunicado, "en la universidad para ingeniero de Software") // Impresión por consola 
 	
 	
@@ -43,10 +42,20 @@ func main(){
 		fmt.Println("F mi rey , ya estás Viejo")
 	}
 
-	mensaje := Hello("Carlos")
-	fmt.Println(mensaje)
-
 	
+	// Uso de For
+	arrayEjemplo := [4]string{"uno", "dos", "tres", "cuatro"}
+
+    fmt.Println("Forma clásica:")
+    for i := 0; i < len(arrayEjemplo); i++ {
+        fmt.Println( i, arrayEjemplo[i])
+    }
+
+    fmt.Println("\nCon range:")
+    for i, valor := range arrayEjemplo {
+        fmt.Println( i, valor)
+    }
+
 	num(12)
 
 	// Creación de Arrays 
@@ -73,7 +82,7 @@ func main(){
 	fmt.Println(frutas)
 	fmt.Println(carrosMarcas)
 
-	
+
 		// Crear un copia usando Copy 
 	numbers := []int{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} 
 	takeNumbers := numbers[:len(numbers)-10]
